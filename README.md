@@ -9,4 +9,10 @@ The data is from a survey of the [income of IT professionals](https://www.kaggle
 - position
 - total years of experience
 - seniority level
-- main technology / programming language   
+- main technology / programming language
+
+## Data Cleaning
+There are some missing data and the values are easily imputed using KNN imputer. I checked for outliers of salary but did not find justifiable reason to remove all of them. However, I did remove a few of observations where the salary is over 1 million euros. I expanded out some features, like 'other programming languages' and drop a few features that are not relevant to predicting salary.
+
+## Model Building
+The linear models in this project include linear regression, ridge regression, huber regression, gamma regression and tweedie regression. I also extended the model with polynomial features and target transformer. I compared categorical features that are one-hot encoded with ones that are smart encoded using the category encoder library.
